@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4v7-5g-JGj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-3" translatesAutoresizingMaskIntoConstraints="NO" id="aHT-Zd-ROU">
+                                <rect key="frame" x="51" y="190" width="272" height="287"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="287" id="Y5l-cZ-BEa"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="KZe-Wn-cIh" appends="YES" id="u2B-ZE-RxG"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kky-J9-hFc">
+                                <rect key="frame" x="285" y="82" width="74" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.00085772156084651385" green="0.00031607748309673986" blue="0.00044426840697805574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="zoom out">
+                                    <color key="titleColor" red="0.89691230856166626" green="0.89291910631859439" blue="0.95698991402116407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="zoomOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CmC-du-uic"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45393797588832485" green="0.45393797588832485" blue="0.45393797588832485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aHT-Zd-ROU" secondAttribute="bottom" constant="190" id="8Ia-z8-2s7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aHT-Zd-ROU" secondAttribute="trailing" constant="36" id="Gx9-wm-zYS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aHT-Zd-ROU" secondAttribute="bottom" constant="190" id="c2E-T6-rD3"/>
+                            <constraint firstItem="aHT-Zd-ROU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="35" id="zo1-li-ocB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="g1K-jX-Ck0"/>
+                    <connections>
+                        <outlet property="myImage" destination="aHT-Zd-ROU" id="g9s-92-J3g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="KZe-Wn-cIh">
+                    <connections>
+                        <action selector="handlePanGesture:" destination="BYZ-38-t0r" id="FUC-0O-cXv"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="695.20000000000005" y="-574.36281859070471"/>
+        </scene>
+        <!--nextViewController-->
+        <scene sceneID="06N-ua-bEP">
+            <objects>
+                <viewController storyboardIdentifier="nextViewController" title="nextViewController" id="lQm-cg-WkK" customClass="nextViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0mN-sY-6Qv"/>
+                        <viewControllerLayoutGuide type="bottom" id="mes-je-0vb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d8H-mb-XTb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.73556472081218272" green="0.32982234158193907" blue="0.64478232126825685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IYl-cD-11m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1412" y="-574.36281859070471"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="x4u-UU-fRH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4v7-5g-JGj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y0E-eS-EiH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RE6-2g-ujT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btL-rl-z2n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-244" y="-574.36281859070471"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="images-3" width="258" height="195"/>
+    </resources>
+</document>
